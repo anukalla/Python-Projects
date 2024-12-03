@@ -1,8 +1,8 @@
 
 class LibraryBookTracker:
     def __init__(self):
-        self.collection = set()  # Use a set to store unique books
-        self.borrowed_books = []  # List of tuples for borrowed books (borrower, book title)
+        self.collection = set()  
+        self.borrowed_books = []  
 
     # 1. Add new books to the library collection
     def add_book(self, book):
@@ -11,6 +11,7 @@ class LibraryBookTracker:
         else:
             self.collection.add(book)
             print(f'The book "{book}" has been added to the collection.')
+            
 # 2. Search for books by a keyword
     def search_books(self, keyword):
         results = [book for book in self.collection if keyword.lower() in book.lower()]
@@ -20,6 +21,7 @@ class LibraryBookTracker:
                 print(f"- {book}")
         else:
             print("No books found matching the keyword.")
+            
 # 3. Remove a book by its exact title
     def remove_book(self, title):
         book_to_remove = next((book for book in self.collection if book.startswith(title)), None)
