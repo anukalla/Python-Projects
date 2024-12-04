@@ -1,4 +1,3 @@
-
 class LibraryBookTracker:
     def __init__(self):
         self.collection = set()  
